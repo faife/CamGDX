@@ -14,6 +14,7 @@ import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import faife.learn.camgdx.CamGDX;
 
 public class AndroidLauncher extends AndroidApplication {
+	private static final String TAG = AndroidLauncher.class.getName();
 
 	private TestText test;
 	private TestCamera testCam;
@@ -40,7 +41,7 @@ public class AndroidLauncher extends AndroidApplication {
 			testCam = new TestCamera(this);
 
 			//layout.addView(test);
-			layout.addView(testCam.getView());
+			layout.addView(testCam);
 			layout.addView(gdxView);
 
 			setContentView(layout);
