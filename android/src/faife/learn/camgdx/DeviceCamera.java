@@ -37,7 +37,7 @@ public class DeviceCamera {
             try {
                 camera.setPreviewDisplay(holder);
             } catch (Throwable t) {
-                Log.e("PreviewDemo-surfaceCallback", "Exception in setPreviewDisplay()", t);
+                Log.e(TAG, "failed setting the preview display", t);
             }
             Camera.Parameters parameters = camera.getParameters();
             parameters.setPreviewSize(640, 480);

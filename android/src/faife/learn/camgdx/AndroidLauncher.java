@@ -18,6 +18,7 @@ public class AndroidLauncher extends AndroidApplication {
 
 	private TestText test;
 	private TestCamera testCam;
+	private CamView camView;
 
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
@@ -39,9 +40,10 @@ public class AndroidLauncher extends AndroidApplication {
 
 			test = new TestText(this);
 			testCam = new TestCamera(this);
+			camView = new CamView(this);
 
 			//layout.addView(test);
-			layout.addView(testCam);
+			layout.addView(camView);
 			layout.addView(gdxView);
 
 			setContentView(layout);
