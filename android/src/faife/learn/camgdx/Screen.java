@@ -46,6 +46,8 @@ public class Screen {
 
     private float[] color = {255, 255, 255, 255};
 
+    // most parts of this class are copied from https://developer.android.com/
+
     public Screen() {
         // initialize vertex byte buffer for shape coordinates
         ByteBuffer bb = ByteBuffer.allocateDirect(

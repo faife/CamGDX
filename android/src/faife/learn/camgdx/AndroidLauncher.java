@@ -16,8 +16,7 @@ import faife.learn.camgdx.CamGDX;
 public class AndroidLauncher extends AndroidApplication {
 	private static final String TAG = AndroidLauncher.class.getName();
 
-	private TestText test;
-	private TestCamera testCam;
+	//private TestCamera testCam;
 	private CamView camView;
 
 	@Override
@@ -38,8 +37,7 @@ public class AndroidLauncher extends AndroidApplication {
 			glView.setZOrderOnTop(true);
 			glView.getHolder().setFormat(PixelFormat.RGBA_8888);
 
-			test = new TestText(this);
-			testCam = new TestCamera(this);
+			//testCam = new TestCamera(this);
 			camView = new CamView(this);
 
 			//layout.addView(test);
@@ -52,14 +50,14 @@ public class AndroidLauncher extends AndroidApplication {
 
 	@Override
 	public void onPause() {
-		testCam.onPause();
+		//testCam.onPause();
 		super.onPause();
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		testCam.onResume();
+		//testCam.onResume();
 	}
 
 }
