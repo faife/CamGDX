@@ -1,5 +1,6 @@
 package faife.learn.camgdx;
 
+import android.graphics.SurfaceTexture;
 import android.opengl.GLSurfaceView;
 
 public class CamView extends GLSurfaceView {
@@ -12,9 +13,10 @@ public class CamView extends GLSurfaceView {
         super(activity);
         this.activity = activity;
 
+        setPreserveEGLContextOnPause(true);
         setEGLContextClientVersion(2);
         renderer = new CamRenderer();
         setRenderer(renderer);
-        setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
+        //setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
     }
 }
